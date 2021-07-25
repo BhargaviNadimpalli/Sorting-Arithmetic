@@ -1,0 +1,17 @@
+#!/bin/bash -x
+declare -A dictionary
+a=1
+b=2
+c=3
+d=$((($a+$b)*$c))
+e=$((($a*$b)+$c))
+f=$((($c+$a)/$b))
+g=$((($a%$b)+$c))
+dictionary[compute1]="$d"
+dictionary[compute2]="$e"
+dictionary[compute3]="$f"
+dictionary[compute4]="$g"
+echo ${dictionary[@]}
+declare -a array
+array=${dictionary[@]}
+echo ${array[@]}
